@@ -63,66 +63,46 @@
         </div>
     </nav>
     
-    <div class="container responsive-sm" style="padding-top: 1%;">
-        <center><strong><h2>Lista de deseo</h2></strong>
-        <hr size="4px" color="black" style="width: 100%;"/></center>
+    <div class="container responsive-sm" style="padding-top: 2%;">
+        <strong><h2 style="text-align: center;">Lista de deseo</h2></strong>
+        <hr size="4px" color="black" style="width: 100%; text-align: center;"/>
     </div>
 
-    <div class="table-responsive-sm" style="padding-left: 5%; padding-right: 5%; padding-top: 5%;">
-        <center><table class="table-light-responsive-sm" style="font-size: 100%;">
-            <tr class="table-light border" style="margin-left: 15px; margin-right: 15px;">
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;"></td>
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;"><center><b>Producto</b></center></td>
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;"><center><b>Precio</b></center></td>
-                <td class="table-light" style="margin-left: 50px; margin-right: 50px;"><center><b>Stock</b></center></td>
-                <td class="table-light"></td>
-            </tr>
-            <tr class="table-light border" style="margin-left: 15px; margin-right: 15px;">
-                <td class="table-light"><img src="Imagenes/Bicicleta.jpg" style="height: 90px; width: 115px;"></td>
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">21 BICI 20 HARO MIDWAY FREECOASTER 20.75" AZUL BALI</label>
-                </td>
-                <td class="table-light">
-                    <label style="margin-left: 15px; margin-right: 15px;">$ 15,899.00</label>
-                </td>
-                <td class="table-light" style="margin-left: 50px; margin-right: 50px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">10</label>
-                </td>
-                <td class="table-light">
-                    <button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button>
-                </td>
-            </tr>
-            <tr class="table-light border" style="margin-left: 15px; margin-right: 15px;">
-                <td class="table-light"><img src="Imagenes/Cuadro.jpg" style="height: 90px; width: 115px;"></td>
-                <td class="table-light" style="margin-left: 15px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">CUADRO 20 WTP BATTLESHIP 20.75" RAW GLOSS</label>
-                </td>
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">$ 8,800.00</label>
-                </td>
-                <td class="table-light" style="margin-left: 50px; margin-right: 50px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">60</label>
-                </td>
-                <td class="table-light">
-                    <button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button>
-                </td>
-            </tr>
-            <tr class="table-light border" style="margin-left: 15px; margin-right: 15px;">
-                <td class="table-light"><img src="Imagenes/Manubrio.jpg" style="height: 90px; width: 115px;"></td>
-                <td class="table-light" style="margin-left: 15px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">MANUBRIO STRANGER LEVEL 4PZA HI-TEN 9" NEGRO</label>
-                </td>
-                <td class="table-light" style="margin-left: 15px; margin-right: 15px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">$ 799.00</label>
-                </td>
-                <td class="table-light" style="margin-left: 50px; margin-right: 50px;">
-                    <label style="margin-left: 15px; margin-right: 15px;">70</label>
-                </td>
-                <td class="table-light">
-                    <button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button>
-                </td>
-            </tr>
-        </table></center>
+    <div class="table-responsive-sm" style="padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom: 5%;">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" style="text-align: center;">Producto</th>
+                <th scope="col" style="text-align: center;">Precio</th>
+                <th scope="col" style="text-align: center;">Stock</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row"><img src="Imagenes/Bicicleta.jpg" style="height: 90px; width: 115px;"></td>
+                <td>21 BICI 20 HARO MIDWAY FREECOASTER 20.75" AZUL BALI</td>
+                <td>$15,899.00</td>
+                <td>10</td>
+                <td><button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button></td>
+              </tr>
+              <tr>
+                <td scope="row"><img src="Imagenes/Cuadro.jpg" style="height: 90px; width: 115px;"></td>
+                <td>CUADRO 20 WTP BATTLESHIP 20.75" RAW GLOSS</td>
+                <td>$8,800.00</td>
+                <td>60</td>
+                <td><button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button></td>
+              </tr>
+              <tr>
+                <td scope="row"><img src="Imagenes/Manubrio.jpg" style="height: 90px; width: 115px;"></td>
+                <td>MANUBRIO STRANGER LEVEL 4PZA HI-TEN 9" NEGRO</td>
+                <td>$799.00</td>
+                <td>70</td>
+                <td><button type="button" class="btn btn-warning btn-md" style="margin-right: 15px; margin-left: 15px;">Agregar al carrito</button></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     
     <footer class="text-white text-center text-lg-start" style="background-color:#004173;">
