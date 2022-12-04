@@ -1,48 +1,32 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     fetchData()
-// })
-
-// const fetchData = async () => {
-//     try {
-//         const res = await fetch('api.json')
-//         const data = await res.json()
-//         console.log(data)
-//     } catch (error) {
-//         console.log(error)
-        
-//     }
-// }
+const items = document.getElementById('items')
+const templateCard = document.getElementById('template-card').content
+const fragment = document.createDocumentFragment()
 
 document.addEventListener('DOMContentLoaded', () => {
-         traerDatos()
-         console.log("correcto");
-     })
+    fetchData()
+})
 
-function traerDatos(){
-    console.log("dentro funcion");
-    const xhttp = new XMLHttpRequest();
-
-    xhttp.open('GET','api.json', true);
-
-    xhttp.send();
-
-    xhttp.onreadystatechange = function(){
-
-        if(this.readyState == 4 && this.status == 200){
-            console.log(this.responseText);
-        }
+const fetchData = async () => {
+    try {
+        const res = await fetch('api.json')
+        const data = await res.json()
+        //console.log(data)
+        pintarCards(data)
+    } catch (error) {
+        console.log(error)
+        
     }
 }
 
-// function traerDatos(){
-//     const xhtt = new XMLHttpRequest();
-//     xhtt.open('GET', 'api.json', true);
-//     xhtt.send();
+const pintarCards = data => {
+    //console.log(data)
+    data.forEach(producto => {
+        templateCard.querySelector('h5').textContent = producto.NombreProducto
+        templateCard.querySelector('p').textContent = producto.precio
+        templateCard.querySelector('img').setAttribute("src",producto.imagen)
 
-//     xhtt.onreadystatechange = function(){
-//         if(this.readyState==4 && this.status==200){
-//             let datos = JSON.parse(this.responseText);
-//             console.log(datos);
-//         }
-//     }
-// }
+        const clone = templateCard.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    items.appendChild(fragment)
+}
