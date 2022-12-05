@@ -77,55 +77,40 @@
         </div>
     </div>
 </nav>
-<div class="container-md">
-    <h1 class="text-center">Panel de productos</h1>
-    <div style="margin-left: 5%;">
-        <a href="AgregarProducto.html">
-            <button class="btn btn-success" type="submit">Nuevo</button>
-        </a>
+
+<body>
+
+
+    <div class="container-md">
+        <h1 class="text-center">Panel de productos</h1>
+        <div style="margin-left: 5%;">
+            <a href="AgregarProducto.html">
+                <button class="btn btn-success" type="submit">Nuevo</button>
+            </a>
+        </div>
+
+        <div class="table-responsive-sm" style="margin-left: 2%; margin-bottom: 0%; margin-top: 2%; margin-right: 2%;">
+            <table class="table table-dark table-striped aling-middle" style="display: 80%;" id="lista-productos">
+                <thead>
+                    <tr>
+                        <th scope="col-sm-12">SKU</th>
+                        <th scope="col-sm-12">Nombre Producto</th>
+                        <th scope="col-sm-12">Precio</th>
+                        <th scope="col-sm-12">Stock</th>
+                        <th scope="col-sm-12">Descrición</th>
+                        <th scope="col-sm-12">Imagen</th>
+                        <th scope="col-sm-12">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="table-responsive-sm" style="margin-left: 2%; margin-bottom: 2%; margin-top: 2%; margin-right: 2%;">
-        <table class="table table-dark table-striped aling-middle" style="display: 80%;">
-            <thead>
-                <tr>
-                    <th scope="col-sm-12"># ID Producto</th>
-                    <th scope="col-sm-12">Nombre</th>
-                    <th scope="col-sm-12">Precio</th>
-                    <th scope="col-sm-12">SKU</th>
-                    <th scope="col-sm-12">Stock</th>
-                    <th scope="col-sm-12">Descrición</th>
-                    <th scope="col-sm-12">Imagen</th>
-                    <th scope="col-sm-12">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <hstack>
-                            <a href="#.html">
-                                <button class="btn btn-danger" type="submit">Borrar</button>
-                            </a>
-                            <a href="ActualizarProducto.html">
-                                <button class="btn btn-info" type="submit">Editar</button>
-                            </a>
-                        </hstack>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-
-<footer class="text-white text-center text-lg-start" style="background-color:#004173; margin-top: 15%;">
+    <script src="fetch.js"></script>
+</body>
+<footer class="text-white text-center text-lg-start" style="background-color:#004173; margin-top: 3%;">
     <div class="container p-1">
         <div class="row mt-4">
             <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
