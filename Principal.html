@@ -7,6 +7,7 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Proyecto Final</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#004173;">
     <div class="container-fluid" style="padding:15px ;">
@@ -66,6 +67,7 @@
         </div>
     </div>
 </nav>
+  <body>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -98,6 +100,46 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+      
+      <div id="div-cookies" style="display: none;">
+        Necesitamos usar cookies para que funcione todo, si permanece aquí acepta su uso, más información en
+        <a hreflang="es" href="https://asesa.es/wp-content/uploads/2020/09/POLITICA-COOKIES-ESP.pdf">Politica de Cookies</a>
+        y la
+        <a hreflang="es" href="http://www.promerc.com.mx/wp-content/uploads/2017/03/avisoprivacidad.pdf">Política de Privacidad</a>.
+        <button type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+            Acepto el uso de cookies
+        </button>
+    </div>
+    <style>
+    #div-cookies {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px -5px 15px gray;
+        padding: 7px;
+        text-align: center;
+        z-index: 99;
+    }
+    </style>
+    <script>
+    function checkAcceptCookies() {
+        if (localStorage.acceptCookies == 'true') {
+        } else {
+            $('#div-cookies').show();
+        }
+    }
+    function acceptCookies() {
+        localStorage.acceptCookies = 'true';
+        $('#div-cookies').hide();
+    }
+    $(document).ready(function() {
+        checkAcceptCookies();
+    });
+    </script>
+      
+      </body>
 <footer class="text-white text-center text-lg-start" style="background-color:#004173;">
     <div class="container p-1">
         <div class="row mt-4">
